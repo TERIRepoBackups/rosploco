@@ -4243,7 +4243,7 @@
 			monaco.editor.defineTheme('vsLight', {base: 'vs'});
 			monaco.editor.defineTheme('vsDark', {base: 'vs-dark'});
 			
-			monaco.editor.defineTheme('visualStudio-Dark', { // also synapse's theme
+			monaco.editor.defineTheme('vsdark', { // also synapse's theme
 				base: 'vs-dark',
 				inherit: true,
 				rules: [
@@ -4262,7 +4262,7 @@
 				}
 			});
 			
-			monaco.editor.defineTheme('visualStudio-Light', { // also synapse's theme
+			monaco.editor.defineTheme('vslight', { // also synapse's theme
 				base: 'vs',
 				inherit: true,
 				rules: [
@@ -4284,10 +4284,10 @@
 			editor = monaco.editor.create(document.getElementById('container'), {
 				value: "-- Monaco (Microsoft) and Rosploco (EthanMcBloxxer) licensed under the MIT License.",
 				language: 'lua',
-				theme: "visualStudio-Dark",
+				theme: "vsdark",
 				folding: true,
 				scrollbar: {
-					useShadows: false,
+					useShadows: true,
 					verticalHasArrows: true,
 				},
 				dragAndDrop: true,
