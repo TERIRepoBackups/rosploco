@@ -42,6 +42,16 @@
 		require(['vs/editor/editor.main'], function() {
 			/* Keywords */ monaco.languages.registerCompletionItemProvider('lua', {provideCompletionItems: function () {return {suggestions: [
 				{
+					label: "is_syn_closure",
+					kind: monaco.languages.CompletionItemKind.Keyword,
+					detail: "Synapse Closure",
+					documentation: {value: "Used to check whether the current exploit is Synapse X."},
+					preselect: false,
+
+					insertText: "is_syn_closure",
+					insertTextRules: monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet,
+				},
+				{
 					label: "global",
 					kind: monaco.languages.CompletionItemKind.Keyword,
 					detail: "Variable",
@@ -3052,7 +3062,6 @@
 			/* Exploiting (Environment) */ monaco.languages.registerCompletionItemProvider('lua', {provideCompletionItems: function () {return {suggestions: [
 				
 				// Synapse
-
 				{
 					label: "getgenv",
 					kind: monaco.languages.CompletionItemKind.Function,
